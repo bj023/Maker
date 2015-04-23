@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IBShopLocationView">
+            <connections>
+                <outlet property="addressName" destination="dQd-Oe-Mvq" id="qKV-6I-nN8"/>
+                <outlet property="shopName" destination="FN1-XZ-TP5" id="7sh-Ga-REv"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R7u-X2-Qut">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="1"/>
+                    <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="fgK-vR-jOC"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="home_cell_pos" translatesAutoresizingMaskIntoConstraints="NO" id="B7A-2D-L52">
+                    <rect key="frame" x="10" y="7" width="15" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="15" id="1WA-P6-rp4"/>
+                        <constraint firstAttribute="height" constant="15" id="maT-nM-EFF"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="台湾 - 金门" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQd-Oe-Mvq" userLabel="locationLabel">
+                    <rect key="frame" x="34" y="7" width="60" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="150" id="cNA-Yc-zPX"/>
+                        <constraint firstAttribute="height" constant="15" id="hoB-jP-BN5"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FN1-XZ-TP5" userLabel="shopNameButton" customClass="UIShopNameButton">
+                    <rect key="frame" x="104" y="7" width="476" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="qaW-vf-wRV"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <state key="normal" title="晟恒昌面税店 (金门店)">
+                        <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="FN1-XZ-TP5" secondAttribute="trailing" constant="20" id="2Zt-AW-ctd"/>
+                <constraint firstItem="FN1-XZ-TP5" firstAttribute="leading" secondItem="dQd-Oe-Mvq" secondAttribute="trailing" constant="10" id="9aV-FF-KVc"/>
+                <constraint firstItem="B7A-2D-L52" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="H2G-C2-1UZ"/>
+                <constraint firstItem="dQd-Oe-Mvq" firstAttribute="leading" secondItem="B7A-2D-L52" secondAttribute="trailing" constant="9" id="LHE-SW-fEd"/>
+                <constraint firstItem="R7u-X2-Qut" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Mi3-1R-8hc"/>
+                <constraint firstItem="R7u-X2-Qut" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ThN-fX-QSI"/>
+                <constraint firstAttribute="trailing" secondItem="R7u-X2-Qut" secondAttribute="trailing" id="ebH-wh-j2S"/>
+                <constraint firstItem="FN1-XZ-TP5" firstAttribute="top" secondItem="R7u-X2-Qut" secondAttribute="bottom" constant="6" id="ham-Bp-VuX"/>
+                <constraint firstItem="dQd-Oe-Mvq" firstAttribute="top" secondItem="R7u-X2-Qut" secondAttribute="bottom" constant="6" id="sVz-Si-5R9"/>
+                <constraint firstItem="B7A-2D-L52" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="7" id="tRI-ee-miy"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="home_cell_pos" width="31" height="31"/>
+    </resources>
+</document>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="7549" systemVersion="14D131" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="BrandDetail" representedClassName="BrandDetail" syncable="YES">
+        <attribute name="brandID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="coords" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="floor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imgUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="intro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="logoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="Coupon" representedClassName="Coupon" parentEntity="ItemBaseInfo" syncable="YES">
+        <attribute name="code" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="couponID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="endDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="expired" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="startDate" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="used" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="CouponDetail" representedClassName="CouponDetail" parentEntity="Coupon" syncable="YES">
+        <attribute name="attentionCn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="attentionLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detailCn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detailLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameCn" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nameLocal" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopLogo" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FavGood" representedClassName="FavGood" parentEntity="ItemBaseInfo" syncable="YES">
+        <attribute name="detailUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumb" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FavGuid" representedClassName="FavGuid" parentEntity="ItemBaseInfo" syncable="YES">
+        <attribute name="detailUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="thumb" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="FavShop" representedClassName="FavShop" parentEntity="ItemBaseInfo" syncable="YES"/>
+    <entity name="HomeBourn" representedClassName="HomeBourn" syncable="YES">
+        <attribute name="bournId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="regions" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="HomeBournRegion" inverseName="bourn" inverseEntity="HomeBournRegion" syncable="YES"/>
+    </entity>
+    <entity name="HomeBournRegion" representedClassName="HomeBournRegion" syncable="YES">
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="bourn" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HomeBourn" inverseName="regions" inverseEntity="HomeBourn" syncable="YES"/>
+        <relationship name="shops" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="HomeBournShop" inverseName="bournRegion" inverseEntity="HomeBournShop" syncable="YES"/>
+    </entity>
+    <entity name="HomeBournShop" representedClassName="HomeBournShop" parentEntity="ItemBaseInfo" syncable="YES">
+        <relationship name="bournRegion" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HomeBournRegion" inverseName="shops" inverseEntity="HomeBournRegion" syncable="YES"/>
+    </entity>
+    <entity name="HomeDiscount" representedClassName="HomeDiscount" parentEntity="ItemBaseInfo" syncable="YES"/>
+    <entity name="HomeNewProduct" representedClassName="HomeNewProduct" parentEntity="ItemBaseInfo" syncable="YES"/>
+    <entity name="HomeRecommend" representedClassName="HomeRecommend" parentEntity="ItemBaseInfo" syncable="YES"/>
+    <entity name="ItemBaseInfo" representedClassName="ItemBaseInfo" isAbstract="YES" syncable="YES">
+        <attribute name="brand" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="detail_url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="eventID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="goodID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="guideID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isDiscount" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="itemID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="logoUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="shopName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="targetID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="type" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="LocateBase" representedClassName="LocateBase" syncable="YES">
+        <attribute name="coords" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="floor" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="floors" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="imgUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="services" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="shopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="shopName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="width" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="LocateBrand" representedClassName="LocateBrand" parentEntity="LocateBase" syncable="YES">
+        <attribute name="brandID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="LocateService" representedClassName="LocateService" parentEntity="LocateBase" syncable="YES">
+        <attribute name="serviceID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="MessageAndCoupon" representedClassName="MessageAndCoupon" syncable="YES">
+        <attribute name="couponCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="messageCount" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="MsgItemInfo" representedClassName="MsgItemInfo" parentEntity="ItemBaseInfo" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="typeName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="NewProductDetail" representedClassName="NewProductDetail" syncable="YES">
+        <attribute name="artNo" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="brand" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="goodsID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="intro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFavorite" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="price2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="images" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="NewProductImages" inverseName="productDetail" inverseEntity="NewProductImages" syncable="YES"/>
+    </entity>
+    <entity name="NewProductImages" representedClassName="NewProductImages" syncable="YES">
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="productDetail" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="NewProductDetail" inverseName="images" inverseEntity="NewProductDetail" syncable="YES"/>
+    </entity>
+    <entity name="ShareItem" representedClassName="ShareItem" syncable="YES">
+        <attribute name="content" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="event_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="guide_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="item_id" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="link" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ShopBrandCategory" representedClassName="ShopBrandCategory" syncable="YES">
+        <attribute name="hasCategory" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="shopId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="shopName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="categories" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ShopBrandCategoryInfo" inverseName="inCategory" inverseEntity="ShopBrandCategoryInfo" syncable="YES"/>
+        <relationship name="letters" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ShopBrandLetterInfo" inverseName="inCategory" inverseEntity="ShopBrandLetterInfo" syncable="YES"/>
+    </entity>
+    <entity name="ShopBrandCategoryInfo" representedClassName="ShopBrandCategoryInfo" syncable="YES">
+        <attribute name="categoryId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="categoryName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="num" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <relationship name="inCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopBrandCategory" inverseName="categories" inverseEntity="ShopBrandCategory" syncable="YES"/>
+    </entity>
+    <entity name="ShopBrandLetterInfo" representedClassName="ShopBrandLetterInfo" syncable="YES">
+        <attribute name="brandId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="brandName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="inCategory" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ShopBrandCategory" inverseName="letters" inverseEntity="ShopBrandCategory" syncable="YES"/>
+    </entity>
+    <entity name="ShopDetail" representedClassName="ShopDetail" syncable="YES">
+        <attribute name="addr" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coords" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imageUrl" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="intro" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="others" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="payment" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopHours" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="tel" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="way" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="website" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="ShopDiscount" representedClassName="ShopDiscount" parentEntity="ItemBaseInfo" syncable="YES"/>
+    <entity name="ShopHomeRecommend" representedClassName="ShopHomeRecommend" parentEntity="ItemBaseInfo" syncable="YES"/>
+    <entity name="ShopInfo" representedClassName="ShopInfo" syncable="YES">
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="favorite" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="img" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="region" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shopId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <entity name="ShopNewProduct" representedClassName="ShopNewProduct" parentEntity="ItemBaseInfo" syncable="YES"/>
+    <entity name="ShopRebate" representedClassName="ShopRebate" parentEntity="ItemBaseInfo" syncable="YES"/>
+    <entity name="ShopTaxRefund" representedClassName="ShopTaxRefund" syncable="YES">
+        <attribute name="location" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="serviceId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="shopId" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="shopName" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="UserInfo" representedClassName="UserInfo" syncable="YES">
+        <attribute name="avatar" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="city" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cookie" optional="YES" attributeType="Binary" syncable="YES"/>
+        <attribute name="email" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isLogin" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="nickName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="phone" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="province" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="scope" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sex" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="BrandDetail" positionX="-270" positionY="-1296" width="128" height="150"/>
+        <element name="Coupon" positionX="-243" positionY="-1269" width="128" height="133"/>
+        <element name="CouponDetail" positionX="-234" positionY="-1260" width="128" height="148"/>
+        <element name="FavGood" positionX="-261" positionY="-1287" width="128" height="75"/>
+        <element name="FavGuid" positionX="-270" positionY="-1296" width="128" height="75"/>
+        <element name="FavShop" positionX="-252" positionY="-1278" width="128" height="45"/>
+        <element name="HomeBourn" positionX="81" positionY="207" width="128" height="73"/>
+        <element name="HomeBournRegion" positionX="90" positionY="216" width="128" height="88"/>
+        <element name="HomeBournShop" positionX="45" positionY="171" width="128" height="58"/>
+        <element name="HomeDiscount" positionX="232" positionY="18" width="128" height="45"/>
+        <element name="HomeNewProduct" positionX="241" positionY="140" width="128" height="45"/>
+        <element name="HomeRecommend" positionX="-164" positionY="108" width="128" height="45"/>
+        <element name="ItemBaseInfo" positionX="-36" positionY="-1449" width="128" height="360"/>
+        <element name="LocateBase" positionX="-261" positionY="-1287" width="128" height="180"/>
+        <element name="LocateBrand" positionX="-252" positionY="-1278" width="128" height="58"/>
+        <element name="LocateService" positionX="-243" positionY="-1269" width="128" height="58"/>
+        <element name="MessageAndCoupon" positionX="-270" positionY="-1296" width="128" height="73"/>
+        <element name="MsgItemInfo" positionX="-261" positionY="-1287" width="128" height="75"/>
+        <element name="NewProductDetail" positionX="-324" positionY="296" width="128" height="208"/>
+        <element name="NewProductImages" positionX="36" positionY="386" width="128" height="73"/>
+        <element name="ShareItem" positionX="-270" positionY="-1296" width="128" height="150"/>
+        <element name="ShopBrandCategory" positionX="268" positionY="224" width="128" height="118"/>
+        <element name="ShopBrandCategoryInfo" positionX="-72" positionY="194" width="128" height="103"/>
+        <element name="ShopBrandLetterInfo" positionX="-477" positionY="126" width="128" height="88"/>
+        <element name="ShopDetail" positionX="-243" positionY="-1035" width="128" height="255"/>
+        <element name="ShopDiscount" positionX="205" positionY="405" width="128" height="45"/>
+        <element name="ShopHomeRecommend" positionX="25" positionY="368" width="128" height="45"/>
+        <element name="ShopInfo" positionX="304" positionY="278" width="128" height="135"/>
+        <element name="ShopNewProduct" positionX="-126" positionY="162" width="128" height="45"/>
+        <element name="ShopRebate" positionX="286" positionY="216" width="128" height="45"/>
+        <element name="ShopTaxRefund" positionX="-135" positionY="308" width="128" height="105"/>
+        <element name="UserInfo" positionX="-270" positionY="-1296" width="128" height="195"/>
+    </elements>
+</model>

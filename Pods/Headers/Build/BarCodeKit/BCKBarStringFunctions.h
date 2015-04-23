@@ -1,0 +1,1 @@
+../../../BarCodeKit/Core/Source/BCKBarStringFunctions.h

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14D98g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="KGk-i7-Jjw" customClass="ShopProductDescriptionCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="轻便的亚麻风衣，舒适的无内衬设计" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZA-6n-08K" userLabel="contentLabel">
+                        <rect key="frame" x="65" y="19" width="240" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="描述 ：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kel-16-kEk">
+                        <rect key="frame" x="15" y="19" width="50" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="zwu-YM-p61"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eOy-8l-Kfi" userLabel="separator">
+                        <rect key="frame" x="0.0" y="53.5" width="320" height="0.5"/>
+                        <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="0.5" id="6uR-8S-2GK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="GZA-6n-08K" secondAttribute="bottom" constant="11" id="E6o-UO-NeE"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="eOy-8l-Kfi" secondAttribute="trailing" constant="-8" id="FOr-Bc-IUN"/>
+                    <constraint firstItem="GZA-6n-08K" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="RwA-Sl-sy3"/>
+                    <constraint firstItem="GZA-6n-08K" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="57" id="XlM-Uy-NNl"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="Kel-16-kEk" secondAttribute="bottom" constant="10.5" id="bGa-Jr-XEY"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="eOy-8l-Kfi" secondAttribute="bottom" constant="-7.5" id="bbz-3s-PYL"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="GZA-6n-08K" secondAttribute="trailing" constant="7" id="cPl-4O-oax"/>
+                    <constraint firstItem="Kel-16-kEk" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="fKn-0W-FgN"/>
+                    <constraint firstItem="Kel-16-kEk" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="yvI-Yr-G09"/>
+                    <constraint firstItem="eOy-8l-Kfi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="zjq-ae-4LR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="contentLabel" destination="GZA-6n-08K" id="EFU-Xb-8XK"/>
+            </connections>
+            <point key="canvasLocation" x="210" y="241.5"/>
+        </tableViewCell>
+    </objects>
+</document>

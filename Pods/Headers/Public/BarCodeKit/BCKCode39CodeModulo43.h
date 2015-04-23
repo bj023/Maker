@@ -1,0 +1,1 @@
+../../../BarCodeKit/Core/Source/BCKCode39CodeModulo43.h

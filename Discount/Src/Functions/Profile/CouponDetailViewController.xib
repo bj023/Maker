@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CouponDetailViewController">
+            <connections>
+                <outlet property="barImageView" destination="BHe-tZ-b4k" id="rfh-oi-sDc"/>
+                <outlet property="headerView" destination="1Qm-WP-eCu" id="TrI-AV-9Pr"/>
+                <outlet property="qrImageView" destination="dAV-Mg-Ju3" id="kvQ-Bc-pRu"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Qm-WP-eCu" userLabel="headerView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="175"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coupon_background_detail" translatesAutoresizingMaskIntoConstraints="NO" id="Gdx-f0-4md" userLabel="background">
+                            <rect key="frame" x="17" y="17" width="566" height="141"/>
+                            <rect key="contentStretch" x="0.5" y="0.5" width="0.0" height="0.0"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dAV-Mg-Ju3" userLabel="qrImageView">
+                            <rect key="frame" x="248" y="35" width="105" height="105"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="105" id="Zhg-we-P17"/>
+                                <constraint firstAttribute="width" constant="105" id="fB6-r3-U6A"/>
+                            </constraints>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BHe-tZ-b4k" userLabel="barImageView">
+                            <rect key="frame" x="58" y="43" width="485" height="90"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="90" id="UZ9-YU-1HS"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.0" blue="0.23529411764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="centerX" secondItem="BHe-tZ-b4k" secondAttribute="centerX" id="29k-nN-WYs"/>
+                        <constraint firstAttribute="centerY" secondItem="Gdx-f0-4md" secondAttribute="centerY" id="46t-TG-rFX"/>
+                        <constraint firstItem="Gdx-f0-4md" firstAttribute="leading" secondItem="1Qm-WP-eCu" secondAttribute="leading" constant="17" id="58k-0E-HV6"/>
+                        <constraint firstAttribute="centerY" secondItem="dAV-Mg-Ju3" secondAttribute="centerY" id="6fF-vZ-ga1"/>
+                        <constraint firstAttribute="centerY" secondItem="BHe-tZ-b4k" secondAttribute="centerY" id="GKI-Ku-cld"/>
+                        <constraint firstAttribute="centerX" secondItem="dAV-Mg-Ju3" secondAttribute="centerX" id="Gh0-r9-AVZ"/>
+                        <constraint firstItem="BHe-tZ-b4k" firstAttribute="leading" secondItem="1Qm-WP-eCu" secondAttribute="leading" constant="58" id="Tls-Bt-Zpo"/>
+                        <constraint firstAttribute="centerX" secondItem="Gdx-f0-4md" secondAttribute="centerX" id="gPx-8b-K7N"/>
+                        <constraint firstAttribute="height" constant="175" id="lFx-4H-tHa"/>
+                        <constraint firstItem="Gdx-f0-4md" firstAttribute="top" secondItem="1Qm-WP-eCu" secondAttribute="top" constant="17" id="zgg-ls-akb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="1Qm-WP-eCu" secondAttribute="trailing" id="Yaw-gJ-HRd"/>
+                <constraint firstItem="1Qm-WP-eCu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="d0M-da-4Z2"/>
+                <constraint firstItem="1Qm-WP-eCu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rR9-3t-oHz"/>
+            </constraints>
+            <point key="canvasLocation" x="766" y="-109"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="coupon_background_detail" width="350" height="140"/>
+    </resources>
+</document>

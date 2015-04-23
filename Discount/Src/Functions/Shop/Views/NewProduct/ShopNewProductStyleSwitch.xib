@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6724" systemVersion="14D87h" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" userLabel="Style Switch" customClass="ShopNewProductStyleSwitch">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUt-df-ULS" userLabel="more">
+                    <rect key="frame" x="555" y="12" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="2mF-oR-g2m"/>
+                        <constraint firstAttribute="width" constant="25" id="VIN-em-gMF"/>
+                    </constraints>
+                    <state key="normal" image="product_more_on">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Rdf-5I-q5Y"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="696-8n-Qoc" userLabel="single">
+                    <rect key="frame" x="510" y="12" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="25" id="g3V-jf-Esh"/>
+                        <constraint firstAttribute="height" constant="25" id="z0j-ns-ktG"/>
+                    </constraints>
+                    <state key="normal" image="product_single_off">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onButtonPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="ukV-MU-DH8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.95294117647058818" green="0.95294117647058818" blue="0.95294117647058818" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="HUt-df-ULS" firstAttribute="leading" secondItem="696-8n-Qoc" secondAttribute="trailing" constant="20" id="A9f-nV-foE"/>
+                <constraint firstAttribute="trailing" secondItem="HUt-df-ULS" secondAttribute="trailing" constant="20" id="CgM-yj-9U7"/>
+                <constraint firstItem="696-8n-Qoc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="IA8-t0-lgr"/>
+                <constraint firstItem="HUt-df-ULS" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Rjz-b2-wSv"/>
+            </constraints>
+            <connections>
+                <outlet property="moreButton" destination="HUt-df-ULS" id="YYo-jf-hgp"/>
+                <outlet property="singleButton" destination="696-8n-Qoc" id="hcL-Aq-HXX"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="product_more_on" width="25" height="25"/>
+        <image name="product_single_off" width="25" height="25"/>
+    </resources>
+</document>

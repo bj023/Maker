@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="39" id="gus-6C-cFr" userLabel="Table View Cell" customClass="ShopSearchBrandTypeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gus-6C-cFr" id="cqf-u0-bBG">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FWh-bu-bLx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QCl-cF-u6V" userLabel="kindButton">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="38"/>
+                                <state key="normal" title="按品类">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="gus-6C-cFr" eventType="touchUpInside" id="51D-8h-Vrj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZI6-cV-4TY" userLabel="alphabetButton">
+                                <rect key="frame" x="160" y="0.0" width="160" height="38"/>
+                                <state key="normal" title="按字母">
+                                    <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buttonPressed:" destination="gus-6C-cFr" eventType="touchUpInside" id="l1L-ci-zbu"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s1j-2W-Bev" userLabel="separator">
+                                <rect key="frame" x="0.0" y="37" width="320" height="1"/>
+                                <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Kfw-qS-hHu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="s1j-2W-Bev" secondAttribute="trailing" id="47T-lz-imd"/>
+                            <constraint firstAttribute="bottom" secondItem="s1j-2W-Bev" secondAttribute="bottom" id="8Ie-Bn-bx2"/>
+                            <constraint firstItem="s1j-2W-Bev" firstAttribute="leading" secondItem="FWh-bu-bLx" secondAttribute="leading" id="fan-N5-VBb"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="FWh-bu-bLx" secondAttribute="trailing" id="keb-Ub-7UZ"/>
+                    <constraint firstItem="FWh-bu-bLx" firstAttribute="leading" secondItem="cqf-u0-bBG" secondAttribute="leading" id="mJ0-3J-T1E"/>
+                    <constraint firstItem="FWh-bu-bLx" firstAttribute="top" secondItem="cqf-u0-bBG" secondAttribute="top" id="uLC-cA-vMy"/>
+                    <constraint firstAttribute="bottom" secondItem="FWh-bu-bLx" secondAttribute="bottom" id="z2F-DI-KiR"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="alphabetButton" destination="ZI6-cV-4TY" id="t5n-Nz-mwd"/>
+                <outlet property="kindButton" destination="QCl-cF-u6V" id="okF-mI-f3S"/>
+            </connections>
+            <point key="canvasLocation" x="190" y="433.5"/>
+        </tableViewCell>
+    </objects>
+</document>

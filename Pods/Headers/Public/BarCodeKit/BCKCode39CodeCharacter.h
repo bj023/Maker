@@ -1,0 +1,1 @@
+../../../BarCodeKit/Core/Source/BCKCode39CodeCharacter.h

@@ -1,0 +1,43 @@
+//
+//  StarShow-Prefix.pch
+//  StarShow
+//
+//  Created by jackyzeng on 12/29/14.
+//  Copyright (c) 2014 wanjiahui. All rights reserved.
+//
+
+#ifndef StarShow_StarShow_Prefix_pch
+#define StarShow_StarShow_Prefix_pch
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#define MR_SHORTHAND
+#import "CoreData+MagicalRecord.h"
+
+#import "ResourcesDefine.h"
+#import "UIColor+SSExt.h"
+#import "UIImage+Resize.h"
+#import "NSString+Ext.h"
+#import "UIViewController+PushViewController.h"
+#import "UtilDefine.h"
+#import "MBProgressHUD.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import "CommonDefine.h"
+#import "UITableViewController+PullRefresh.h"
+#import "MBProgressHUD+Helper.h"
+#import "UIViewController+GoShop.h"
+
+#ifndef NDEBUG
+#define SSLog(...) NSLog(__VA_ARGS__)
+#else
+#define SSLog(...) ((void)0)
+#endif // NDEBUG
+
+#endif // __OBJC__
+
+#endif // StarShow_StarShow_Prefix_pch

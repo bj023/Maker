@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="90" id="KGk-i7-Jjw" customClass="GuidTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="90"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pkH-rh-zf6">
+                        <rect key="frame" x="15" y="15" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="pkH-rh-zf6" secondAttribute="height" multiplier="1:1" id="wYQ-Ki-MAs"/>
+                        </constraints>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wax-7W-79M" customClass="LikeButton">
+                        <rect key="frame" x="343" y="32" width="25" height="25"/>
+                        <state key="normal" image="common_liked">
+                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="台中必败9款精品好货" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1tb-aT-bFg">
+                        <rect key="frame" x="85" y="15" width="172.5" height="21.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="五月天阿信草拍赋值" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yr8-pq-v36">
+                        <rect key="frame" x="85" y="41" width="108" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" misplaced="YES" text="台湾-金门" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="83u-Zi-6LN">
+                        <rect key="frame" x="105" y="60" width="53" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="info_location" translatesAutoresizingMaskIntoConstraints="NO" id="AkP-sF-EWj">
+                        <rect key="frame" x="85" y="60" width="15" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="AkP-sF-EWj" secondAttribute="height" multiplier="1:1" id="bND-v7-nI3"/>
+                            <constraint firstAttribute="width" constant="15" id="nML-db-nmE"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="test金金猛" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Noa-Jd-tBl">
+                        <rect key="frame" x="306" y="60" width="57" height="14.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yr8-pq-v36" firstAttribute="leading" secondItem="1tb-aT-bFg" secondAttribute="leading" id="4cV-c4-Iqo"/>
+                    <constraint firstItem="1tb-aT-bFg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="59p-NL-fX9"/>
+                    <constraint firstAttribute="trailing" secondItem="pkH-rh-zf6" secondAttribute="trailing" constant="281" id="8xb-7T-GN9"/>
+                    <constraint firstItem="Noa-Jd-tBl" firstAttribute="centerY" secondItem="83u-Zi-6LN" secondAttribute="centerY" id="ARA-OZ-z1i"/>
+                    <constraint firstAttribute="centerY" secondItem="wax-7W-79M" secondAttribute="centerY" id="BcP-c3-Gb0"/>
+                    <constraint firstItem="AkP-sF-EWj" firstAttribute="top" secondItem="yr8-pq-v36" secondAttribute="bottom" constant="4" id="Br9-nU-dAq"/>
+                    <constraint firstItem="yr8-pq-v36" firstAttribute="leading" secondItem="AkP-sF-EWj" secondAttribute="leading" id="C4M-Zv-HZI"/>
+                    <constraint firstItem="83u-Zi-6LN" firstAttribute="leading" secondItem="AkP-sF-EWj" secondAttribute="trailing" constant="5" id="HDj-Kt-Dea"/>
+                    <constraint firstItem="Noa-Jd-tBl" firstAttribute="leading" secondItem="83u-Zi-6LN" secondAttribute="trailing" constant="10" id="QP9-E7-zVM"/>
+                    <constraint firstItem="pkH-rh-zf6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="RuC-L6-enP"/>
+                    <constraint firstAttribute="trailing" secondItem="Noa-Jd-tBl" secondAttribute="trailing" constant="30" id="YnC-WT-6Wp"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="pkH-rh-zf6" secondAttribute="trailing" constant="281" id="aGz-3Y-1BE"/>
+                    <constraint firstItem="pkH-rh-zf6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="izb-fb-QC7"/>
+                    <constraint firstAttribute="trailing" secondItem="wax-7W-79M" secondAttribute="trailing" constant="25" id="mLy-Pr-gBF"/>
+                    <constraint firstItem="yr8-pq-v36" firstAttribute="top" secondItem="1tb-aT-bFg" secondAttribute="bottom" constant="5" id="nRy-mv-nm6"/>
+                    <constraint firstItem="AkP-sF-EWj" firstAttribute="width" secondItem="AkP-sF-EWj" secondAttribute="height" multiplier="1:1" id="rA9-Ao-poR"/>
+                    <constraint firstItem="83u-Zi-6LN" firstAttribute="centerY" secondItem="AkP-sF-EWj" secondAttribute="centerY" id="rFT-pM-0fU"/>
+                    <constraint firstItem="1tb-aT-bFg" firstAttribute="leading" secondItem="pkH-rh-zf6" secondAttribute="trailing" constant="10" id="sJn-0p-5cq"/>
+                    <constraint firstAttribute="bottom" secondItem="pkH-rh-zf6" secondAttribute="bottom" constant="15" id="vd6-Cr-fZY"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="8xb-7T-GN9"/>
+                        <exclude reference="aGz-3Y-1BE"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="detail" destination="yr8-pq-v36" id="Qpw-Zf-UcJ"/>
+                <outlet property="likeButton" destination="wax-7W-79M" id="yfb-cZ-Wam"/>
+                <outlet property="region" destination="83u-Zi-6LN" id="T0b-jo-yF7"/>
+                <outlet property="shopName" destination="Noa-Jd-tBl" id="rew-Iv-E9N"/>
+                <outlet property="thumb" destination="pkH-rh-zf6" id="fzc-dW-RK9"/>
+                <outlet property="title" destination="1tb-aT-bFg" id="y0w-x6-cBG"/>
+            </connections>
+            <point key="canvasLocation" x="366.5" y="250"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="common_liked" width="25" height="25"/>
+        <image name="info_location" width="30" height="30"/>
+    </resources>
+</document>

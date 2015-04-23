@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="232" id="7mn-69-d8Y" userLabel="Home Raiders Cell" customClass="HomeRaidersCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="232"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7mn-69-d8Y" id="d3j-nG-YTw">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VqO-HP-Ovs">
+                        <rect key="frame" x="0.0" y="10" width="320" height="222"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rDS-bO-qmd" customClass="IBRaidersView">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="azv-CF-slA" customClass="IBShopLocationView">
+                                <rect key="frame" x="0.0" y="191" width="320" height="31"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="C7a-AT-Pum"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="azv-CF-slA" firstAttribute="leading" secondItem="VqO-HP-Ovs" secondAttribute="leading" id="8ZC-ai-J0C"/>
+                            <constraint firstItem="azv-CF-slA" firstAttribute="leading" secondItem="rDS-bO-qmd" secondAttribute="leading" id="9x7-vt-O07"/>
+                            <constraint firstItem="rDS-bO-qmd" firstAttribute="top" secondItem="VqO-HP-Ovs" secondAttribute="top" id="SuU-M6-4mw"/>
+                            <constraint firstAttribute="trailing" secondItem="azv-CF-slA" secondAttribute="trailing" id="TH5-kC-H8S"/>
+                            <constraint firstAttribute="bottom" secondItem="rDS-bO-qmd" secondAttribute="bottom" constant="22" id="dUk-7b-LRf"/>
+                            <constraint firstAttribute="bottom" secondItem="azv-CF-slA" secondAttribute="bottom" id="isS-2D-Xl6"/>
+                            <constraint firstItem="azv-CF-slA" firstAttribute="trailing" secondItem="rDS-bO-qmd" secondAttribute="trailing" id="qJE-Zz-zpJ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstItem="VqO-HP-Ovs" firstAttribute="top" secondItem="d3j-nG-YTw" secondAttribute="top" constant="10" id="2Pv-Rf-mTD"/>
+                    <constraint firstAttribute="bottom" secondItem="VqO-HP-Ovs" secondAttribute="bottom" constant="-1" id="R6i-qg-8NV"/>
+                    <constraint firstAttribute="trailing" secondItem="VqO-HP-Ovs" secondAttribute="trailing" id="kc8-pW-Euh"/>
+                    <constraint firstItem="VqO-HP-Ovs" firstAttribute="leading" secondItem="d3j-nG-YTw" secondAttribute="leading" id="z2b-7p-tqg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="locationView" destination="azv-CF-slA" id="GMg-Ls-66F"/>
+                <outlet property="raidersView" destination="rDS-bO-qmd" id="56x-Af-WrL"/>
+            </connections>
+            <point key="canvasLocation" x="26" y="488"/>
+        </tableViewCell>
+    </objects>
+</document>

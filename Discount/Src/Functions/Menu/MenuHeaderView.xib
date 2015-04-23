@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuHeaderView">
+            <connections>
+                <outlet property="headerButton" destination="udz-vr-YnU" id="ubN-Dm-754"/>
+                <outlet property="likedButton" destination="0c9-iH-BqZ" id="nal-55-xOx"/>
+                <outlet property="qbButton" destination="INf-Kl-dko" id="biF-UN-QEd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_header_mask" translatesAutoresizingMaskIntoConstraints="NO" id="q4G-At-YIZ">
+                    <rect key="frame" x="250" y="250" width="100" height="100"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="K2w-Gu-Tss"/>
+                        <constraint firstAttribute="height" constant="100" id="lux-CS-sgo"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="udz-vr-YnU" userLabel="headerButton" customClass="HeaderImageButton">
+                    <rect key="frame" x="253" y="253" width="94" height="94"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="94" id="AaV-yQ-A5n"/>
+                        <constraint firstAttribute="height" constant="94" id="IyH-I4-3gD"/>
+                    </constraints>
+                    <state key="normal">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0c9-iH-BqZ" userLabel="qbButton">
+                    <rect key="frame" x="510" y="275" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="oOy-0B-JK7"/>
+                        <constraint firstAttribute="height" constant="50" id="t9F-rq-GSx"/>
+                    </constraints>
+                    <state key="normal" image="login_liked">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="INf-Kl-dko">
+                    <rect key="frame" x="40" y="275" width="50" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="OEe-LL-otV"/>
+                        <constraint firstAttribute="height" constant="50" id="bfD-w0-Kx2"/>
+                    </constraints>
+                    <state key="normal" image="login_quan">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.15686274509803921" green="0.15686274509803921" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="centerY" secondItem="0c9-iH-BqZ" secondAttribute="centerY" id="03k-c8-K9N"/>
+                <constraint firstAttribute="centerY" secondItem="INf-Kl-dko" secondAttribute="centerY" id="9iX-WM-QWt"/>
+                <constraint firstAttribute="centerX" secondItem="q4G-At-YIZ" secondAttribute="centerX" id="A7X-Jc-sIk"/>
+                <constraint firstAttribute="centerX" secondItem="udz-vr-YnU" secondAttribute="centerX" id="ZzT-B2-Ezl"/>
+                <constraint firstAttribute="trailing" secondItem="0c9-iH-BqZ" secondAttribute="trailing" constant="40" id="eQf-mH-Liz"/>
+                <constraint firstItem="INf-Kl-dko" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="jvo-GW-QCx"/>
+                <constraint firstAttribute="centerY" secondItem="udz-vr-YnU" secondAttribute="centerY" id="mlR-Uf-cd1"/>
+                <constraint firstAttribute="centerY" secondItem="q4G-At-YIZ" secondAttribute="centerY" id="qWX-1z-YvY"/>
+            </constraints>
+            <point key="canvasLocation" x="316" y="384"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_header_mask" width="100" height="100"/>
+        <image name="login_liked" width="50" height="50"/>
+        <image name="login_quan" width="50" height="50"/>
+    </resources>
+</document>

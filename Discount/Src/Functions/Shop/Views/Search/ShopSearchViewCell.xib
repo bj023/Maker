@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Twc-0m-Slo" customClass="ShopSearchViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Twc-0m-Slo" id="LCf-8Z-fCT">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="evj-u3-UOM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ryG-cG-LRY" userLabel="separator">
+                                <rect key="frame" x="0.0" y="42" width="320" height="1"/>
+                                <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Wcn-lm-gaC"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Km8-wz-MdO" userLabel="nameLabel">
+                                <rect key="frame" x="25" y="12" width="270" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="vEB-2x-p1u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmV-6j-Qbo">
+                                <rect key="frame" x="295" y="11" width="20" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="3WH-Vb-uLl"/>
+                                    <constraint firstAttribute="height" constant="22" id="cTd-Ky-gQ4"/>
+                                </constraints>
+                                <state key="normal" image="common_enter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Km8-wz-MdO" secondAttribute="centerY" id="0J9-ri-3mW"/>
+                            <constraint firstAttribute="bottom" secondItem="ryG-cG-LRY" secondAttribute="bottom" id="FNa-sS-Ayz"/>
+                            <constraint firstAttribute="centerY" secondItem="nmV-6j-Qbo" secondAttribute="centerY" id="R3k-6c-nUg"/>
+                            <constraint firstItem="ryG-cG-LRY" firstAttribute="leading" secondItem="evj-u3-UOM" secondAttribute="leading" id="R9k-fg-7Xw"/>
+                            <constraint firstAttribute="trailing" secondItem="Km8-wz-MdO" secondAttribute="trailing" constant="25" id="XtO-NN-sBR"/>
+                            <constraint firstAttribute="trailing" secondItem="ryG-cG-LRY" secondAttribute="trailing" id="ay3-Fj-hUG"/>
+                            <constraint firstItem="Km8-wz-MdO" firstAttribute="leading" secondItem="evj-u3-UOM" secondAttribute="leading" constant="25" id="i2i-g8-8nl"/>
+                            <constraint firstAttribute="trailing" secondItem="nmV-6j-Qbo" secondAttribute="trailing" constant="5" id="oR3-Rx-HN7"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" red="0.8862745098" green="0.8862745098" blue="0.8862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="evj-u3-UOM" secondAttribute="bottom" id="Gfi-Gl-dKb"/>
+                    <constraint firstItem="evj-u3-UOM" firstAttribute="top" secondItem="LCf-8Z-fCT" secondAttribute="top" id="aMF-JR-YHh"/>
+                    <constraint firstAttribute="trailing" secondItem="evj-u3-UOM" secondAttribute="trailing" id="jcb-8b-yFD"/>
+                    <constraint firstItem="evj-u3-UOM" firstAttribute="leading" secondItem="LCf-8Z-fCT" secondAttribute="leading" id="qTy-L8-MyT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="nameLabel" destination="Km8-wz-MdO" id="uAZ-Zn-Vkl"/>
+            </connections>
+            <point key="canvasLocation" x="332" y="506"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="common_enter" width="30" height="30"/>
+    </resources>
+</document>
